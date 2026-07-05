@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Acres Plot — For Sale | Whitefield Road, Bengaluru</title>
+<meta name="description" content="30x40 residential plot for sale on Whitefield Road, Bengaluru. DTCP approved, clear title, ready to build.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:        #23281f;
+    --sand:       #efe9d8;
+    --moss:       #37493b;
+    --moss-dark:  #202b23;
+    --brick:      #8a3f2c;
+    --paper:      #faf8f2;
+    --line:       #d8d0ba;
+    --ok-green:   #3f6b4a;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Work Sans', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+  }
+  h1,h2,h3{ font-family:'Fraunces', serif; }
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    align-items:flex-end;
+    background:
+      linear-gradient(180deg, rgba(32,43,35,0.15) 0%, rgba(32,43,35,0.75) 85%),
+      url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  }
+  .hero-inner{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:48px 24px 40px;
+    color:var(--sand);
+  }
+  .badge{
+    display:inline-block;
+    background:var(--brick);
+    color:#fff;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:2px;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(32px, 6vw, 58px);
+    font-weight:600;
+    line-height:1.08;
+    margin-bottom:10px;
+  }
+  .hero p.loc{
+    font-size:clamp(15px, 2.4vw, 19px);
+    opacity:.92;
+    font-weight:500;
+  }
+
+  /* ---------- QUICK FACTS STRIP ---------- */
+  .facts{
+    background:var(--moss-dark);
+    color:var(--sand);
+  }
+  .facts-inner{
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+  }
+  .facts-inner div{
+    padding:22px 12px;
+    border-right:1px solid rgba(255,255,255,.12);
+  }
+  .facts-inner div:last-child{ border-right:none; }
+  .facts-inner .num{
+    font-family:'Fraunces', serif;
+    font-size:clamp(20px,3vw,28px);
+    font-weight:600;
+    display:block;
+  }
+  .facts-inner .label{
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    opacity:.75;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding:64px 24px; }
+  .wrap{ max-width:1100px; margin:0 auto; }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--brick);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .section-title{
+    font-size:clamp(24px,3.4vw,34px);
+    font-weight:600;
+    margin-bottom:24px;
+    max-width:640px;
+  }
+
+  /* Description */
+  .about p{ max-width:680px; color:#4a4f42; font-size:16px; }
+
+  /* Details table */
+  .details{ background:var(--sand); }
+  .details-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-top:1px solid var(--line);
+    max-width:680px;
+  }
+  .details-grid dt{
+    padding:14px 0;
+    font-weight:600;
+    border-bottom:1px solid var(--line);
+    color:var(--moss);
+  }
+  .details-grid dd{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    text-align:right;
+  }
+  .details-grid.full{ grid-template-columns:1fr 1fr; }
+
+  /* Plot diagram (signature element) */
+  .diagram-wrap{ display:flex; justify-content:center; margin-top:36px; }
+  .diagram-wrap svg{ width:100%; max-width:420px; height:auto; }
+
+  /* Amenities */
+  .amenities ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px 28px;
+    max-width:680px;
+  }
+  .amenities li{
+    padding-left:26px;
+    position:relative;
+    font-size:15.5px;
+  }
+  .amenities li::before{
+    content:"";
+    position:absolute;
+    left:0; top:6px;
+    width:14px; height:14px;
+    border:2px solid var(--ok-green);
+    border-radius:50%;
+  }
+
+  /* Map */
+  .map iframe{ width:100%; height:360px; border:0; border-radius:4px; }
+
+  /* Contact */
+  .contact{
+    background:var(--moss);
+    color:var(--sand);
+    text-align:center;
+  }
+  .contact .section-title{ margin:0 auto 14px; color:var(--sand); }
+  .contact p{ opacity:.85; margin-bottom:30px; }
+  .cta-row{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 28px;
+    border-radius:3px;
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    transition:transform .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn.call{ background:var(--brick); color:#fff; }
+  .btn.whatsapp{ background:#2f5d3a; color:#fff; }
+
+  footer{
+    text-align:center;
+    padding:22px;
+    font-size:13px;
+    color:#8a8a7c;
+    background:var(--paper);
+  }
+
+  /* Sticky mobile call bar */
+  .sticky-call{
+    display:none;
+    position:fixed;
+    bottom:0; left:0; right:0;
+    background:var(--brick);
+    color:#fff;
+    text-align:center;
+    padding:14px;
+    font-weight:600;
+    text-decoration:none;
+    z-index:50;
+    letter-spacing:.02em;
+  }
+
+  @media (max-width: 720px){
+    .facts-inner{ grid-template-columns:repeat(2,1fr); }
+    .facts-inner div:nth-child(2){ border-right:none; }
+    .details-grid, .amenities ul{ grid-template-columns:1fr; }
+    .sticky-call{ display:block; }
+    body{ padding-bottom:52px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="badge">For Sale</span>
+    <h1>MGM Developers — 1200x2400 Residential Plot</h1>
+    <p class="loc">Sogane, Shivamogga · DTCP Approved</p>
+  </div>
+</div>
+
+<!-- ================= QUICK FACTS ================= -->
+<div class="facts">
+  <div class="facts-inner">
+    <div><span class="num">1200 sq.ft</span><span class="label">Area</span></div>
+    <div><span class="num">₹65 Lakh</span><span class="label">Price</span></div>
+    <div><span class="num">East</span><span class="label">Facing</span></div>
+    <div><span class="num">Clear</span><span class="label">Title</span></div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="about">
+  <div class="wrap">
+    <div class="eyebrow">Overview</div>
+    <h2 class="section-title">A quiet plot, five minutes from the main road</h2>
+    <p>
+      This 30x40 plot sits in a developing residential layout just off Whitefield Road,
+      with tarred road access, underground drainage, and electricity already laid.
+      The layout is DTCP approved with a clear, litigation-free title — ready for
+      immediate registration. Ideal for building an independent home or as a
+      long-term investment in a fast-appreciating stretch of Bengaluru.
+    </p>
+  </div>
+</section>
+
+<!-- ================= DETAILS ================= -->
+<section class="details">
+  <div class="wrap">
+    <div class="eyebrow">Specifications</div>
+    <h2 class="section-title">Plot details</h2>
+    <dl class="details-grid">
+      <dt>Dimensions</dt><dd>30 ft × 40 ft (1200 sq.ft)</dd>
+      <dt>Facing</dt><dd>East</dd>
+      <dt>Road width</dt><dd>30 ft tarred road</dd>
+      <dt>Approval</dt><dd>DTCP Approved Layout</dd>
+      <dt>Title</dt><dd>Clear &amp; marketable</dd>
+      <dt>Corner plot</dt><dd>No</dd>
+      <dt>Price</dt><dd>₹65,00,000 (negotiable)</dd>
+      <dt>Registration</dt><dd>Ready, khata available</dd>
+    </dl>
+
+    <!-- Signature element: schematic plot diagram -->
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+        <rect x="40" y="40" width="240" height="260" fill="none" stroke="#37493b" stroke-width="2.5"/>
+        <line x1="40" y1="30" x2="280" y2="30" stroke="#8a3f2c" stroke-width="1.5"/>
+        <line x1="40" y1="24" x2="40" y2="36" stroke="#8a3f2c" stroke-width="1.5"/>
+        <line x1="280" y1="24" x2="280" y2="36" stroke="#8a3f2c" stroke-width="1.5"/>
+        <text x="160" y="20" text-anchor="middle" font-family="Work Sans" font-size="13" fill="#8a3f2c">30 ft</text>
+
+        <line x1="300" y1="40" x2="300" y2="300" stroke="#8a3f2c" stroke-width="1.5"/>
+        <line x1="294" y1="40" x2="306" y2="40" stroke="#8a3f2c" stroke-width="1.5"/>
+        <line x1="294" y1="300" x2="306" y2="300" stroke="#8a3f2c" stroke-width="1.5"/>
+        <text x="335" y="174" text-anchor="middle" font-family="Work Sans" font-size="13" fill="#8a3f2c" transform="rotate(90 335 174)">40 ft</text>
+
+        <polygon points="160,20 152,34 168,34" fill="#37493b"/>
+        <text x="160" y="18" text-anchor="middle" font-family="Work Sans" font-size="10" fill="#37493b"></text>
+        <text x="177" y="55" font-family="Work Sans" font-size="11" fill="#37493b">N</text>
+
+        <text x="160" y="175" text-anchor="middle" font-family="Fraunces" font-size="16" fill="#23281f">1200 sq.ft</text>
+        <text x="160" y="195" text-anchor="middle" font-family="Work Sans" font-size="11" fill="#6b6f5e">Plot boundary (schematic)</text>
+
+        <line x1="40" y1="20" x2="20" y2="40" stroke="#c9c2a8" stroke-width="1"/>
+        <text x="10" y="45" font-family="Work Sans" font-size="10" fill="#8a8a7c">Road →</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AMENITIES ================= -->
+<section class="amenities">
+  <div class="wrap">
+    <div class="eyebrow">Nearby &amp; Included</div>
+    <h2 class="section-title">Amenities &amp; connectivity</h2>
+    <ul>
+      <li>Tarred internal roads</li>
+      <li>Underground drainage</li>
+      <li>Electricity connection nearby</li>
+      <li>Overhead water tank in layout</li>
+      <li>5 min to main road / bus stop</li>
+      <li>15 min to nearest school</li>
+      <li>20 min to hospital</li>
+      <li>Gated layout with compound wall</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="map">
+  <div class="wrap">
+    <div class="eyebrow">Location</div>
+    <h2 class="section-title">Find it on the map</h2>
+    <iframe
+      src="https://www.google.com/maps?q=Sogane,Karnataka&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#cdbf94;">Get in touch</div>
+    <h2 class="section-title">Interested in this plot?</h2>
+    <p>Call or WhatsApp for site visit, price negotiation, or documents.</p>
+    <div class="cta-row">
+      <a class="btn call" href="tel:+919999999999">📞 Call +91 99999 99999</a>
+      <a class="btn whatsapp" href="https://wa.me/919999999999?text=Hi%2C%20I%27m%20interested%20in%20the%20Green%20Acres%20plot" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Green Acres Plot. All details are indicative; please verify documents before purchase.
+</footer>
+
+<!-- Sticky call bar for mobile -->
+<a class="sticky-call" href="tel:+919999999999">📞 Call now: +91 99999 99999</a>
+
+</body>
+</html>
